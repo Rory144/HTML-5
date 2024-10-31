@@ -1,0 +1,347 @@
+/* ----------------------------------------------- */  
+/*     HOJA DE ESTILO PARA EL EJERCICIO DE ROOMEL  */  
+/* ----------------------------------------------- */  
+
+/* ----------------------------------------------- */ 
+/* RESET CSS GENERAL DE LOS ESTILOS DEL NAVEGADOR
+    (Se debe incluir antes de poner vuestros estilos)
+/* ----------------------------------------------- */
+
+/* ---------------------------------------------------- */
+/* URL del archivo original del reset CSS creado por Eric Meyer: 
+            http://meyerweb.com/eric/tools/css/reset/
+   Este reset fue diseñado para eliminar los estilos por defecto de los navegadores.
+*/
+/* v2.0: Indica que es la versión 2.0 del reset CSS. */
+
+/* 20110126: Es la fecha en que esta versión del reset fue lanzada o actualizada 
+                 (formato AAAAMMDD: 26 de enero de 2011).
+*/
+
+/* License: none (public domain): Esto significa que el código está en el 
+   dominio público, por lo que no tiene restricciones de uso. 
+   Cualquier persona puede utilizarlo, modificarlo o distribuirlo sin necesidad de atribución.*/
+/* ---------------------------------------------------- */
+
+
+/* ----------------------------------------------- */
+/* Reinicio de márgenes, rellenos y bordes en TODOS 
+                los elementos comunes */
+/* ----------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;                /* Eliminar márgenes por defecto */
+    padding: 0;               /* Eliminar rellenos por defecto */
+    border: 0;                /* Eliminar bordes por defecto */
+    font-size: 100%;          /* Restablecer el tamaño de la fuente a 100% */
+    font: inherit;            /* Heredar las propiedades de fuente */
+    vertical-align: baseline; /* Alinear elementos en la misma línea base */
+}
+
+/* ----------------------------------------------- */
+/* HTML5 display-role reset for older browsers */
+/* ----------------------------------------------- */
+/* Algunos elementos de HTML5 no eran reconocidos como "block" por navegadores antiguos */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;           /* Forzar estos elementos a comportarse como bloques */
+}
+
+/* Restablecer la altura de la línea para el contenido del cuerpo */
+body {
+    line-height: 1;            /* Eliminar espacio extra entre líneas */
+}
+
+/* Eliminar los estilos de viñetas y numeración de listas no ordenadas (ul) y ordenadas (ol) */
+ol, ul {
+    list-style: none;          /* No mostrar ningún tipo de estilo en las listas */
+}
+
+/* Eliminar las comillas automáticas de los elementos blockquote y q */
+blockquote, q {
+    quotes: none;              /* No agregar comillas por defecto a las citas */
+}
+
+/* Asegurar que no se muestren comillas antes y después de blockquote o q */
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';              /* No insertar contenido antes o después */
+    content: none;            /* Eliminar cualquier contenido que pudiera aparecer */
+}
+
+/* Eliminar el espacio entre celdas y colapsar bordes en las tablas */
+table {
+    border-collapse: collapse; /* Unir bordes de celdas para que no haya separación */
+    border-spacing: 0;         /* Eliminar cualquier espacio entre las celdas */
+}
+
+
+/* ----------------------------------------------- */  
+/*       AQUI COMIENZA EL ESTILO ESCOGIDO          */  
+/* ----------------------------------------------- */  
+
+/* ----------------------------------------------- */  
+/*       1. ANCHO MAXIMO Y CENTRADO DE CONTENIDO   */  
+/* ----------------------------------------------- */  
+#cnt {
+    max-width: 1024px;           /* Limita el ancho máximo del contenedor a 1024px */
+    margin: 0 auto;              /* Centra el contenedor horizontalmente en la página */
+    border: 1px solid black;     /* Añade un borde negro de 1px alrededor del contenedor */
+}
+
+/* ----------------------------------------------- */  
+/*          2. ESTILOS GENERALES                   */  
+/* ----------------------------------------------- */  
+body {
+    font-family: Arial, Helvetica, sans-serif;  /* Usa Arial como fuente principal y otras como respaldo */
+    font-size: 10px;                            /* Tamaño base de la fuente de 10px */
+}
+
+     /* ----------------------------------------------- */  
+    /*          2.1. ESTILOS DIFERENTES PARA LOS H      */  
+    /* ------------------------------------------------ */  
+    h1, h2, h3, h4, h5, h6 {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+       /* Establece una fuente diferente para todos los niveles de encabezado, comenzando con 'Franklin Gothic Medium' */
+    
+    h1 {font-size: 2.6rem;}            /* Define el tamaño de fuente de los encabezados h1 */
+    
+    h2 {font-size: 1.6rem;}            /* Define el tamaño de fuente de los encabezados h2 */
+    
+    h3 {font-size: 1.4rem;}            /* Define el tamaño de fuente de los encabezados h3 */
+    
+    h4 {font-size: 1.4rem;}            /* Define el tamaño de fuente de los encabezados h4 */
+    
+    h5 {font-size: 1.2rem;}           /* Define el tamaño de fuente de los encabezados h5  */
+
+/* ----------------------------------------------- */  
+/*            3. CABECERA PRINCIPAL                */  
+/* ----------------------------------------------- */  
+#cnt > header{
+    padding: 10px;
+}
+
+#cnt > header > div > div > h1{
+    display: inline-block; /* Hace que el h1 se comporte como un bloque en línea*/
+    margin-left: 55px;}    /* Añade un margen izquierdo de 30px para separar el h1 de otros elementos adyacentes.*/
+
+/* -------------------------------------------------------------------*/  
+/*       3.1 Para evitar modifcar el aspect ratio de las imágenes     */  
+/*  (Se usa el max-width y el min-width para mantener la proporción) */  
+/* -------------------------------------------------------------------*/                              
+
+/* Se aplica flexbox al primer div dentro del header para alinear verticalmente sus hijos (elementos hijos en su eje principal). 
+   - display: flex convierte el div en un contenedor flexible.
+   - align-items: center alinea los elementos hijos de este contenedor flex en el centro vertical. */
+   #cnt > header > div:first-of-type {
+    display: flex;
+    align-items: center;
+}
+    /* -------------------------------------------------------------------*/  
+    /*       3.1.1 La parte izquierda del aparatado "Roomel e imágenes"  */  
+    /* -------------------------------------------------------------------*/   
+    /* El primer div dentro del segundo div del header tiene un ancho del 49% y se muestra en línea. 
+        - display: inline-block permite que el div conserve el ancho y altura establecidos pero se comporte como un elemento en línea.
+        - width: 49% ajusta su ancho para ocupar el 49% del espacio disponible, dejando espacio para el siguiente elemento. */
+#cnt > header > div > div:first-of-type {
+    width: 49%;
+    display: inline-block;
+    margin-top: 2%;
+}
+    /* -------------------------------------------------------------------*/  
+    /*       3.1.2 La parte derecha del aparatado "Roomel e imágenes"     */  
+    /* -------------------------------------------------------------------*/   
+    /* El segundo div dentro de la misma estructura tiene un ancho del 50% y su contenido está alineado a la derecha.
+        - width: 50% hace que este div ocupe la mitad del contenedor.
+        - text-align: right alinea el contenido del div hacia la derecha. */
+
+#cnt > header > div > div:nth-of-type(2) {
+    width: 50%;
+    display: inline-block;
+    text-align: right;
+    margin-top: 2%;
+}
+
+    /* Para las imágenes dentro de esta estructura:
+        - max-width: 49% asegura que la imagen no supere el 49% del ancho del contenedor, manteniendo su proporción y evitando que se deforme. */
+#cnt > header > div > div > img {max-width: 49%;}
+
+/* ----------------------------------------------- */  
+/*              4. Navegación del inicio            */  
+/* ----------------------------------------------- */  
+#cnt > header > nav > ul {
+    text-align: center;
+    margin-top: 30px;}
+   
+#cnt > header > nav > ul> li { 
+    display: inline-block;        /* Hace que los elementos de lista (li) se muestren en línea */
+    width: 15%;                   /* Cada elemento de la lista ocupa el 15% del contenedor */
+    border: 1px solid black    
+}
+
+#cnt > header > nav > ul > li > a{
+    display: inline-block;
+    width:100% ;
+    padding: 10 px 0 px;
+    border: 1px solid black;}
+
+/* ----------------------------------------------- */  
+/*        5. Apartado  "Sobre Nosotros"            */  
+/* ----------------------------------------------- */  
+#cnt > #main {padding: 20px;}
+
+#cnt > #main > article{
+    border: 1px solid black;}
+
+#cnt > #main > article:first-of-type {
+    display: flex;
+    align-items: start;
+    padding: 20px;}
+
+#cnt > #main > article:first-of-type > div:first-of-type{ 
+    display: inline-block; 
+    width: 48%;
+    text-align: left;}
+
+#cnt > #main > article:first-of-type > div > header {
+    margin-bottom: 38px;
+    display: inline-block; 
+    width: 90%; 
+    border-bottom: 1px solid black;}
+
+#cnt > #main > article:first-of-type > div > header > h2 {
+    text-align: left;
+    max-width: 30%;}
+
+#cnt > #main > article:first-of-type > div > p {
+    max-width: 84%;}
+
+
+#cnt > #main > article:nth-child(2) > div:nth-child(2) > ul {
+    display: inline-block;
+    max-width: 100%;
+    text-align: right;  
+}
+
+/* ----------------------------------------------- */  
+/*           6. División 3 columnas                */  
+/* ----------------------------------------------- */  
+
+#cnt > #main > div { 
+    display: flex;       /* Activa el modelo de diseño flexbox para la caja permitiendo: 
+                            una alineación y distribución más eficiente de los elementos hijos */
+    align-items: start;  /* Alinea los elementos hijos al inicio del contenedor flex (parte superior) */
+    margin-top: 20px;    /* Agrega un margen de 20 píxeles en la parte superior del <div> */
+    margin-bottom: 10px; /* Agrega un margen de 20 píxeles en la parte inferior del <div> */
+    align-items: stretch; /* Esto hace que los elementos hijos ocupen todo el alto del contenedor */
+    height: 39vh; /* Ajusta la altura del contenedor (100vh es 100% de la altura del viewport) */
+    gap: 10px; /* Crea un espacio de 20px entre las columnas */
+}
+
+#cnt > #main > div > article:nth-child(1), 
+#cnt > #main > div > article:nth-child(2), 
+#cnt > #main > div > section { 
+    display: inline-block; 
+    max-width: 40%;      /* Establece un ancho máximo del 30% del contenedor padre para cada elemento */
+    min-width: 300px;    /* Establece un ancho mínimo de 300 píxeles para cada elemento */
+}
+
+#cnt > #main > div > article > header { 
+    margin-bottom: 20px; /* Agrega un margen de 20 píxeles en la parte inferior del <header>, 
+                        separando el <header> del contenido que sigue */
+    display: inline-block; 
+    width: 99%; 
+    border-bottom: 1px solid black;
+}
+
+#cnt > #main > div > article > p { 
+    padding: 10px;
+    max-width: 80%;
+    text-align: left;
+}
+
+#cnt > #main > div > article > header > h2 { 
+    text-align: left;
+    padding: 8px 0px;    /* Agrega un relleno de 0 píxeles en la parte superior e inferior 
+    y 20 píxeles a los lados (izquierda y derecha) del enlace */
+    margin-left: 2px;}
+    
+#cnt > #main > div > article { 
+    border: 1px solid black;
+    margin-top 20px;
+    padding: 20px 0px;    /* Agrega un relleno de 0 píxeles en la parte superior e inferior 
+                           y 20 píxeles a los lados (izquierda y derecha) del enlace */
+    }
+
+#cnt > #main > div > section { 
+    border: 1px solid black;
+    margin-top 20px;
+    }
+
+#cnt > #main > div > section > header  { 
+    display: inline-block; 
+    width: 99%; 
+    border: 1px solid black;
+}
+#cnt > #main > div > section > header > h2 { 
+    padding: 20px 10px;    /* Agrega un relleno de 0 píxeles en la parte superior e inferior 
+    y 20 píxeles a los lados (izquierda y derecha) del enlace */
+}
+
+    /* ----------------------------------------------- */  
+    /*  6.1. Maquetar el apartado "Ultimos trabajos"   */  
+    /* ----------------------------------------------- */  
+    #cnt > #main > div > section > article { 
+        padding: 10px; /* Agrega un relleno de 10 píxeles en todos los lados del <article> */
+    }
+
+    #cnt > #main > div > section > article > header { 
+        margin-bottom: 20px; /* Agrega un margen de 20 píxeles en la parte inferior del <header>, 
+                            separando el <header> del contenido que sigue */
+    }
+
+    #cnt > #main > div > section > article > p { 
+        text-align: left;
+        max-width: 70%; 
+    }
+
+    #cnt > #main > div > section > article > footer { 
+        text-align: right; /* Alinea el texto del <footer> a la derecha */
+    }
+
+/* ----------------------------------------------- */  
+/*                  FOOTER                         */ 
+/* ----------------------------------------------- */  
+#cnt > footer { 
+    text-align: right; /* Alinea el texto del footer a la derecha */
+    padding: 20px;     /* Agrega un relleno de 20 píxeles en todos los lados del footer */
+    margin-top: 2px;
+    border: 1px solid black;
+}
+
+#cnt > footer > nav { 
+    display: inline-block; /* Hace que el <nav> se comporte como un bloque en línea, permitiendo que se coloque junto a otros elementos en línea */
+    width: 100%;           /* Establece el ancho del <nav> al 100% del contenedor padre, ocupando todo el espacio disponible */
+}
+
+#cnt > footer > nav > ul > li { 
+    display: inline-block; /* Permite que los <li> se alineen en línea horizontalmente, uno al lado del otro */
+}
+
+#cnt > footer > nav > ul > li > a { 
+    padding: 0px 20px;    /* Agrega un relleno de 0 píxeles en la parte superior e inferior 
+                           y 20 píxeles a los lados (izquierda y derecha) del enlace */
+}
+
+
